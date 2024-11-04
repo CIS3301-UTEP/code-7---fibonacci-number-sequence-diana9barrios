@@ -12,22 +12,21 @@ def get_fibonacci_number_sequence(number):
     if number == 0:
         return [0]
     elif number == 1:
-        return [0,1]
-    prev1 = 0
-    prev2 = 1
-    number_sequence = [0,1]
+        return [1]
+    # prev1 = 0
+    # prev2 = 1
+    number_sequence = [1]
     for i in range(2, number + 1):
-        current = prev1 + prev2
-        prev1 = prev2
-        prev2 = current
-        number_sequence.append(current)
+        number_sequence.append(get_fibonacci_number(i))
+
     return number_sequence
+        
 
    
        
 if __name__ == "__main__":
     # pass #Remove this line and insert your code to test your Fibonacci function here
-    result_a = get_fibonacci_number(2)
+    result_a = get_fibonacci_number(4)
     print (result_a)
-    result_b = get_fibonacci_number_sequence(5)
+    result_b = get_fibonacci_number_sequence(6)
     print (result_b)
